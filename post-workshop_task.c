@@ -100,6 +100,8 @@ void filter_ascending(struct node *startPtr, int count_nodes)
 	curPtr = startPtr->nextPtr;
     for (int i = 0; i < count_nodes; i++)
     {
+		prevPtr = startPtr; 
+		curPtr = startPtr->nextPtr;
         while (curPtr != NULL)
         {
             if (prevPtr->data > curPtr->data)
